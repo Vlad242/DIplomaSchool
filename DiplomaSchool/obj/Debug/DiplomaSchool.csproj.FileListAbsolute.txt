@@ -1,0 +1,14 @@
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.exe.config
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.exe
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.pdb
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\MySql.Data.dll
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csprojResolveAssemblyReference.cache
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.LogIn.resources
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Properties.Resources.resources
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csproj.GenerateResource.Cache
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csproj.CoreCompileInputs.cache
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.exe
+c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.pdb
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.Answer.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.ConfirmLogin.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.UserRegister.resources

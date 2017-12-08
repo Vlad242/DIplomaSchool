@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.IO;
 
-namespace DIplomaSchool.LogIn
+namespace DiplomaSchool.LogIn
 {
     class InternetConection
     {
