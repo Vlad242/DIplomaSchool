@@ -25,12 +25,14 @@ namespace DiplomaSchool.Login
 
         private void Answer_Load(object sender, EventArgs e)
         {
+            groupBox1.Visible = false;
+            groupBox2.Visible = true;
             try
             {
                 MySqlCommand cmd = new MySqlCommand
                 {
                     Connection = conn,
-                    CommandText = string.Format("SELECT Secret, Answer FROM Users WHERE Login='" + textBox1.Text + "';")
+                    CommandText = string.Format("SELECT Secret, Answer FROM Users WHERE Login='" + Login + "';")
                 };
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -67,7 +69,6 @@ namespace DiplomaSchool.Login
                         attempt = --attempt;
                         MessageBox.Show("The answer is false, there are " + attempt + " more attempts!");
                     }
-                 
                 }
             }
             else
@@ -83,10 +84,11 @@ namespace DiplomaSchool.Login
                 try
                 {
                     string password = GetHashSha256(textBox3.Text);
-                    string sql = "UPDATE Users SET Password= '" + password + "' WHERE Login= " + Login + ";";
+                    string sql = "UPDATE Users SET Password= '" + password + "' WHERE Login= '" + Login + "';";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Password changed!");
+                    conn.Close();
                     LogIn login = new LogIn();
                     login.Show();
                     this.Dispose();
@@ -141,6 +143,14 @@ namespace DiplomaSchool.Login
                 label7.Text = "Password length is acceptable!";
                 label7.ForeColor = Color.Green;
             }
+        }
+
+        private void Answer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Close();
+            LogIn login = new LogIn();
+            login.Show();
+            this.Dispose();
         }
     }
 }

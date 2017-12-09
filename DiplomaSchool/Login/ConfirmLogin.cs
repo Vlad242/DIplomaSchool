@@ -56,5 +56,13 @@ namespace DiplomaSchool.Login
                 MessageBox.Show("Будь ласка, введіть логін!");
             }
         }
+
+        private void ConfirmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Close();
+            LogIn login = new LogIn();
+            login.Show();
+            this.Dispose();
+        }
     }
 }
