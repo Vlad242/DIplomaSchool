@@ -67,8 +67,7 @@ namespace DiplomaSchool.Login
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string res1 = reader.GetString(0);
-                    comboBox1.Items.Add(res1);
+                    comboBox1.Items.Add(reader.GetString(0));
                 }
                 reader.Close();
             }
@@ -104,11 +103,128 @@ namespace DiplomaSchool.Login
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             ConfirmLogin confirm = new ConfirmLogin();
             confirm.Show();
             this.Hide();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != string.Empty && textBox2.Text != string.Empty)
+            {
+                string login = comboBox1.Text;
+                string password = textBox2.Text;
+
+                bool flag = false;
+                foreach (string item in comboBox1.Items)
+                {
+                    if (login == item)
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    if (SearchPass(login, password))
+                    {
+                        int ID = 0;
+                        int Type = 0;
+                        MySqlCommand cmd2 = new MySqlCommand
+                        {
+                            Connection = conn,
+                            CommandText = string.Format("Select User_id, UType_id FROM Users Where Login = '" + login +"';")
+                        };
+                        MySqlDataReader reader = cmd2.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            ID = reader.GetInt32(0);
+                            Type = reader.GetInt32(1);
+                        }
+                        reader.Close();
+                        ///////////////REDIRECT
+                        MessageBox.Show("Welcome!");
+                        switch (Type)
+                        {
+                            case 1:
+                                {
+                                    Admin.AdminRoom admin = new Admin.AdminRoom(ID);
+                                    admin.Show();
+                                    conn.Close();
+                                    Hide();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Teacher.TeacherRoom teacher = new Teacher.TeacherRoom(ID);
+                                    teacher.Show();
+                                    conn.Close();
+                                    Hide();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    User.UserRoom user = new User.UserRoom(ID);
+                                    user.Show();
+                                    conn.Close();
+                                    Hide();
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    Student.StudentRoom student = new Student.StudentRoom(ID);
+                                    student.Show();
+                                    conn.Close();
+                                    Hide();
+                                    break;
+                                }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error logging, check the correct data entry!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This user is not registered on the system!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill in all the logon fields!");
+            }
+        }
+
+        public bool SearchPass(string Login, string password)
+        {
+            DataBase.PasswordHash hash = new DataBase.PasswordHash();
+            string pass = hash.GetHashSha256(password);
+            int result = 0;
+
+            MySqlCommand cmd2 = new MySqlCommand
+            {
+                Connection = conn,
+                CommandText = string.Format("Select User_id FROM Users Where Login = '" + Login + "' and password = '" + pass + "';")
+            };
+            MySqlDataReader reader = cmd2.ExecuteReader();
+            while (reader.Read())
+            {
+                result = reader.GetInt32(0);
+            }
+            reader.Close();
+
+            if (result != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

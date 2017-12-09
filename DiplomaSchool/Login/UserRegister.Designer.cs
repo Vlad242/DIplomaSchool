@@ -30,6 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserRegister));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TeacherBox = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -50,19 +63,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.StudentBox = new System.Windows.Forms.GroupBox();
-            this.TeacherBox = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -85,9 +85,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.TeacherBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.StudentBox.SuspendLayout();
-            this.TeacherBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,6 +104,127 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Form for user registration";
+            // 
+            // TeacherBox
+            // 
+            this.TeacherBox.Controls.Add(this.comboBox4);
+            this.TeacherBox.Controls.Add(this.textBox14);
+            this.TeacherBox.Controls.Add(this.label13);
+            this.TeacherBox.Controls.Add(this.dateTimePicker2);
+            this.TeacherBox.Controls.Add(this.textBox10);
+            this.TeacherBox.Controls.Add(this.textBox11);
+            this.TeacherBox.Controls.Add(this.textBox12);
+            this.TeacherBox.Controls.Add(this.label20);
+            this.TeacherBox.Controls.Add(this.label21);
+            this.TeacherBox.Controls.Add(this.label22);
+            this.TeacherBox.Controls.Add(this.label23);
+            this.TeacherBox.Controls.Add(this.label24);
+            this.TeacherBox.Location = new System.Drawing.Point(15, 324);
+            this.TeacherBox.Name = "TeacherBox";
+            this.TeacherBox.Size = new System.Drawing.Size(410, 211);
+            this.TeacherBox.TabIndex = 64;
+            this.TeacherBox.TabStop = false;
+            this.TeacherBox.Text = "Teacher data";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "M",
+            "W"});
+            this.comboBox4.Location = new System.Drawing.Point(111, 127);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 65;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(111, 153);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(198, 20);
+            this.textBox14.TabIndex = 64;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 156);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 13);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Academic status:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(111, 102);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker2.TabIndex = 59;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(111, 47);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(198, 20);
+            this.textBox10.TabIndex = 48;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(111, 21);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(198, 20);
+            this.textBox11.TabIndex = 47;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(111, 73);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(198, 20);
+            this.textBox12.TabIndex = 46;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 130);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 13);
+            this.label20.TabIndex = 53;
+            this.label20.Text = "Gender:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(10, 102);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(52, 13);
+            this.label21.TabIndex = 51;
+            this.label21.Text = "Birthdate:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(10, 24);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(38, 13);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "Name:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 73);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(69, 13);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "Father name:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 47);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(52, 13);
+            this.label24.TabIndex = 44;
+            this.label24.Text = "Surname:";
             // 
             // groupBox3
             // 
@@ -315,127 +436,6 @@
             this.StudentBox.TabStop = false;
             this.StudentBox.Text = "Student data";
             // 
-            // TeacherBox
-            // 
-            this.TeacherBox.Controls.Add(this.comboBox4);
-            this.TeacherBox.Controls.Add(this.textBox14);
-            this.TeacherBox.Controls.Add(this.label13);
-            this.TeacherBox.Controls.Add(this.dateTimePicker2);
-            this.TeacherBox.Controls.Add(this.textBox10);
-            this.TeacherBox.Controls.Add(this.textBox11);
-            this.TeacherBox.Controls.Add(this.textBox12);
-            this.TeacherBox.Controls.Add(this.label20);
-            this.TeacherBox.Controls.Add(this.label21);
-            this.TeacherBox.Controls.Add(this.label22);
-            this.TeacherBox.Controls.Add(this.label23);
-            this.TeacherBox.Controls.Add(this.label24);
-            this.TeacherBox.Location = new System.Drawing.Point(15, 324);
-            this.TeacherBox.Name = "TeacherBox";
-            this.TeacherBox.Size = new System.Drawing.Size(410, 211);
-            this.TeacherBox.TabIndex = 64;
-            this.TeacherBox.TabStop = false;
-            this.TeacherBox.Text = "Teacher data";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "M",
-            "W"});
-            this.comboBox4.Location = new System.Drawing.Point(111, 127);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 65;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(111, 153);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(198, 20);
-            this.textBox14.TabIndex = 64;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 156);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 13);
-            this.label13.TabIndex = 63;
-            this.label13.Text = "Academic status:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(111, 102);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(198, 20);
-            this.dateTimePicker2.TabIndex = 59;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(111, 47);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(198, 20);
-            this.textBox10.TabIndex = 48;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(111, 21);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(198, 20);
-            this.textBox11.TabIndex = 47;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(111, 73);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(198, 20);
-            this.textBox12.TabIndex = 46;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(11, 130);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 13);
-            this.label20.TabIndex = 53;
-            this.label20.Text = "Gender:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 102);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(52, 13);
-            this.label21.TabIndex = 51;
-            this.label21.Text = "Birthdate:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(10, 24);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(38, 13);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "Name:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 73);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(69, 13);
-            this.label23.TabIndex = 45;
-            this.label23.Text = "Father name:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(10, 47);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 13);
-            this.label24.TabIndex = 44;
-            this.label24.Text = "Surname:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -640,16 +640,17 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UserRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserRegister_FormClosing);
             this.Load += new System.EventHandler(this.UserRegister_Load);
             this.groupBox1.ResumeLayout(false);
+            this.TeacherBox.ResumeLayout(false);
+            this.TeacherBox.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.StudentBox.ResumeLayout(false);
             this.StudentBox.PerformLayout();
-            this.TeacherBox.ResumeLayout(false);
-            this.TeacherBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

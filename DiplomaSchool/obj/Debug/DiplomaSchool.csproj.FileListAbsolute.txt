@@ -12,3 +12,6 @@ c:\users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.p
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.Answer.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.ConfirmLogin.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.UserRegister.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.StudentRoom.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.TeacherRoom.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.UserRoom.resources

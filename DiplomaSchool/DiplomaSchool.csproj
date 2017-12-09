@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminRoom.Designer.cs">
+      <DependentUpon>AdminRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\DataBaseInfo.cs" />
     <Compile Include="DataBase\PasswordHash.cs" />
     <Compile Include="Login\Answer.cs">
@@ -77,6 +83,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\StudentRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentRoom.Designer.cs">
+      <DependentUpon>StudentRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherRoom.Designer.cs">
+      <DependentUpon>TeacherRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserRoom.Designer.cs">
+      <DependentUpon>UserRoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login\Answer.resx">
       <DependentUpon>Answer.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +122,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Student\StudentRoom.resx">
+      <DependentUpon>StudentRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\TeacherRoom.resx">
+      <DependentUpon>TeacherRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserRoom.resx">
+      <DependentUpon>UserRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,10 +145,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Mailer\" />
-    <Folder Include="Teacher\" />
-    <Folder Include="User\Student\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
