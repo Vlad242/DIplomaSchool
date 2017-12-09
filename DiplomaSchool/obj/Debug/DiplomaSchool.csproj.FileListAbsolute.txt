@@ -15,3 +15,7 @@ C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.L
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.StudentRoom.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.TeacherRoom.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.UserRoom.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.ServiceList.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\bin\Debug\itextsharp.dll
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.NewOrder.resources

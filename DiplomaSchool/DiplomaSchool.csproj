@@ -32,6 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DIploma_repair\DIploma_repair\Libs\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\DIploma_repair\DIploma_repair\Libs\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\DIploma_repair\DIploma_repair\Libs\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\DIploma_repair\DIploma_repair\Libs\MySql.Data.dll</HintPath>
     </Reference>
@@ -46,6 +58,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\AdminRoom.cs">
@@ -95,6 +108,18 @@
     <Compile Include="Teacher\TeacherRoom.Designer.cs">
       <DependentUpon>TeacherRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ServiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ServiceList.Designer.cs">
+      <DependentUpon>ServiceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\UserRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\TeacherRoom.resx">
       <DependentUpon>TeacherRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ServiceList.resx">
+      <DependentUpon>ServiceList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserRoom.resx">
       <DependentUpon>UserRoom.cs</DependentUpon>

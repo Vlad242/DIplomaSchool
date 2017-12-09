@@ -62,11 +62,10 @@ namespace DiplomaSchool.Login
 
             label1.ForeColor = Color.Black;
             label6.ForeColor = Color.Black;
-            label4.ForeColor = Color.Black;
             label7.ForeColor = Color.Black;
             label10.ForeColor = Color.Black;
             label25.ForeColor = Color.Black;
-
+            label14.ForeColor = Color.Black;
             switch (comboBox1.Text)
             {
                 case "Admin":
@@ -87,6 +86,9 @@ namespace DiplomaSchool.Login
                     }
                 case "User":
                     {
+                        label14.ForeColor = Color.Black;
+                        button1.Enabled = true;
+                        textBox8.Visible = false;
                         StudentBox.Visible = false;
                         TeacherBox.Visible = false;
                         ConfirmedAdmin = false;
@@ -95,18 +97,22 @@ namespace DiplomaSchool.Login
                     }
                 case "Teacher":
                     {
+                        label14.ForeColor = Color.Black;
+                        button1.Enabled = true;
+                        textBox8.Visible = false;
                         StudentBox.Visible = false;
                         TeacherBox.Visible = true;
-
                         UserType = 2;
                         ConfirmedAdmin = false;
                         break;
                     }
                 case "Student":
                     {
+                        label14.ForeColor = Color.Black;
+                        button1.Enabled = true;
+                        textBox8.Visible = false;
                         StudentBox.Visible = true;
                         TeacherBox.Visible = false;
-
                         UserType = 4;
                         ConfirmedAdmin = false;
                         break;
@@ -133,7 +139,7 @@ namespace DiplomaSchool.Login
                 MySqlCommand cmd = new MySqlCommand
                 {
                     Connection = conn,
-                    CommandText = string.Format("SELECT Group_id, Group_name FROM Groups;")
+                    CommandText = string.Format("SELECT Group_id, Group_name FROM Groups Where Status = 1;")
                 };
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -195,15 +201,15 @@ namespace DiplomaSchool.Login
         {
             if (textBox2.Text.Length >= 8 && textBox2.Text == textBox4.Text)
             {
-                label6.Text = "Does not match";
-                label6.ForeColor = Color.Red;
-                ConfirmedPassword = false;
-            }
-            else
-            {
                 label6.Text = "Confirmed";
                 label6.ForeColor = Color.Green;
                 ConfirmedPassword = true;
+            }
+            else
+            {
+                label6.Text = "Does not match";
+                label6.ForeColor = Color.Red;
+                ConfirmedPassword = false;
             }
         }
 
@@ -285,8 +291,7 @@ namespace DiplomaSchool.Login
                                                 string pass = password.GetHashSha256(textBox4.Text);
                                                 /////////////////////Password
 
-                                                string sql = "insert into Users(User_id, Login, UType_id," +
-                                                    " Password, Secret, Answer, Email) values (null, '" +
+                                                string sql = "insert into Users(User_id, Login, UType_id, Password, Secret, Answer, Email) values (null, '" +
                                                       textBox1.Text + "', " + UserType + ", '"
                                                     + pass + "', '" + richTextBox1.Text + "', '"
                                                     + textBox7.Text + "', '" + textBox15.Text + "')";
@@ -379,7 +384,7 @@ namespace DiplomaSchool.Login
                                             //////////////////ADD TEACHER
                                             sql = "insert into Teachers(Teacher_id, User_id, Login," +
                                               " T_Name, T_Surname, T_Fname, T_Bdate, T_Gender, Academic_status) values (null, " +
-                                               id + ", " + null + ", '"
+                                               id + ",  null , '"
                                               + textBox11.Text + "', '" + textBox10.Text + "', '" +
                                               textBox12.Text + "', '" + dateTimePicker2.Text + "', '"
                                               + comboBox4.Text + "', '" + textBox14.Text + "')";
@@ -526,11 +531,11 @@ namespace DiplomaSchool.Login
 
                                             //////////////////ADD TEACHER
                                             sql = "insert into Students(Student_id, Group_id, User_id," +
-                                              " Login, S_Name, S_Surname, S_Fname, S_Gender, S_Phone) values (null, " +
-                                               Groups[comboBox3.SelectedIndex] + ", " + id + ", " + null + ", '"
+                                              " Login, S_Name, S_Surname, S_Fname,S_Bdate, S_Gender, S_Phone) values (null, " +
+                                               Groups[comboBox3.SelectedIndex] + ", " + id + ",  null , '"
                                               + textBox5.Text + "', '" + textBox3.Text + "', '" +
                                               textBox6.Text + "', '" + dateTimePicker1.Text + "', '"
-                                              + comboBox2.Text + "', '" + textBox9.Text + "')";
+                                              + comboBox2.Text + "', " + textBox9.Text + ")";
                                             cmd = new MySqlCommand(sql, conn);
                                             cmd.ExecuteNonQuery();
 
@@ -538,7 +543,7 @@ namespace DiplomaSchool.Login
                                             MessageBox.Show("Registration was successful!");
                                             this.Close();
                                         }
-                                        catch (Exception)
+                                        catch (Exception ex)
                                         {
                                             MessageBox.Show("Something wrong!");
                                         }
