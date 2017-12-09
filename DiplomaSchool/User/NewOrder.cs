@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiplomaSchool.User
@@ -62,7 +57,7 @@ namespace DiplomaSchool.User
                 reader.Close();
 
                 /////////////groups
-                 cmd = new MySqlCommand
+                cmd = new MySqlCommand
                 {
                     Connection = conn,
                     CommandText = string.Format("SELECT Group_id, Group_name FROM Groups WHERE Status = 1;")
