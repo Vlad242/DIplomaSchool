@@ -72,7 +72,7 @@ namespace DiplomaSchool.Student
             try
             {
                 dataGridView2.Columns.Clear();
-                MySqlDataAdapter mda = new MySqlDataAdapter("SELECT DISTINCT Services.Service_name, Services.Service_price , Status.Status_name FROM Students INNER JOIN Users on(Users.User_id=Students.User_id) INNER JOIN Orders on(Orders.User_id=Users.User_id) INNER JOIN Services on(Services.Service_id=Orders.Service_id) INNER JOIN Status on(Status.Status_id=Orders.Status_id) WHERE Students.User_id =" + Id + " and Services.Service_id != 1 and Services.Service_id != 2;", conn);
+                MySqlDataAdapter mda = new MySqlDataAdapter("SELECT Services.Service_name, Services.Service_price , Status.Status_name FROM Students INNER JOIN Users on(Users.User_id=Students.User_id) INNER JOIN Orders on(Orders.User_id=Users.User_id) INNER JOIN Services on(Services.Service_id=Orders.Service_id) INNER JOIN Status on(Status.Status_id=Orders.Status_id) WHERE Students.User_id =" + Id + " and Services.Service_id != 1 and Services.Service_id != 2;", conn);
                 DataSet ds = new DataSet();
                 mda.Fill(ds, "Service");
                 dataGridView2.DataSource = ds.Tables["Service"];

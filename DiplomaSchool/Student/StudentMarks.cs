@@ -230,5 +230,13 @@ namespace DiplomaSchool.Student
         {
             textBox1.Text = dateTimePicker1.Text;
         }
+
+        private void StudentMarks_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StudentRoom student = new StudentRoom(Id);
+            student.Show();
+            conn.Close();
+            this.Dispose();
+        }
     }
 }

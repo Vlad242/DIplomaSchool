@@ -196,6 +196,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "StudentMarks";
             this.Text = "StudentMarks";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentMarks_FormClosing);
             this.Load += new System.EventHandler(this.StudentMarks_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
