@@ -146,6 +146,12 @@
     <Compile Include="Teacher\Marks_analis.Designer.cs">
       <DependentUpon>Marks_analis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\SetOrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\SetOrderStatus.Designer.cs">
+      <DependentUpon>SetOrderStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\Shedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\Marks_analis.resx">
       <DependentUpon>Marks_analis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\SetOrderStatus.resx">
+      <DependentUpon>SetOrderStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\Shedule.resx">
       <DependentUpon>Shedule.cs</DependentUpon>

@@ -76,7 +76,7 @@ namespace DiplomaSchool.Student
                 DataSet ds = new DataSet();
                 mda.Fill(ds, "Service");
                 dataGridView2.DataSource = ds.Tables["Service"];
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                for (int i = 0; i < dataGridView2.Rows.Count; i++)
                     dataGridView2.Rows[i].Cells[0].ReadOnly = true;
                 /////columns names
                 dataGridView2.Columns[0].HeaderText = "Service name";

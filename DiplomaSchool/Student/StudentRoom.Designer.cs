@@ -534,6 +534,7 @@
             this._lnkTargetEnglish.TabIndex = 36;
             this._lnkTargetEnglish.TabStop = true;
             this._lnkTargetEnglish.Text = "Ukrainian";
+            this._lnkTargetEnglish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this._lnkTargetEnglish_LinkClicked);
             // 
             // _lnkSourceEnglish
             // 
@@ -544,6 +545,7 @@
             this._lnkSourceEnglish.TabIndex = 33;
             this._lnkSourceEnglish.TabStop = true;
             this._lnkSourceEnglish.Text = "English";
+            this._lnkSourceEnglish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this._lnkSourceEnglish_LinkClicked);
             // 
             // _webBrowserCtrl
             // 
@@ -564,6 +566,7 @@
             this._btnSpeak.TabIndex = 44;
             this._btnSpeak.Text = "Speak";
             this._btnSpeak.UseVisualStyleBackColor = true;
+            this._btnSpeak.Click += new System.EventHandler(this._btnSpeak_Click);
             // 
             // _lnkReverse
             // 
@@ -575,6 +578,7 @@
             this._lnkReverse.TabIndex = 38;
             this._lnkReverse.TabStop = true;
             this._lnkReverse.Text = "Reverse";
+            this._lnkReverse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this._lnkReverse_LinkClicked);
             // 
             // _lblStatus
             // 
@@ -594,6 +598,7 @@
             this._btnTranslate.TabIndex = 43;
             this._btnTranslate.Text = "Translate";
             this._btnTranslate.UseVisualStyleBackColor = true;
+            this._btnTranslate.Click += new System.EventHandler(this._btnTranslate_Click);
             // 
             // label4
             // 
