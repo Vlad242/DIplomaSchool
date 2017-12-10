@@ -30,3 +30,4 @@ C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.T
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.StartLesson.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Visit_analis.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.SetOrderStatus.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Admin.AdminRoom.resources

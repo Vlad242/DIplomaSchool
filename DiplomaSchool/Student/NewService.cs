@@ -88,7 +88,7 @@ namespace DiplomaSchool.Student
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Orders added!");
-
+                    Send();
                     StudentRoom room = new StudentRoom(Id);
                     room.Show();
                     conn.Close();
@@ -103,6 +103,44 @@ namespace DiplomaSchool.Student
             {
 
             }
+        }
+
+        private void Send()
+        {
+            //////////////////get_orderID
+            int orderId = 0;
+            MySqlCommand cmd1 = new MySqlCommand
+            {
+                Connection = conn,
+                CommandText = string.Format("SELECT MAX(Order_id) FROM Orders;")
+            };
+            MySqlDataReader reader = cmd1.ExecuteReader();
+            while (reader.Read())
+            {
+                orderId = reader.GetInt32(0);
+            }
+            reader.Close();
+            /////////////////////USer Email
+            string userMail = "";
+            string Login = "";
+            cmd1 = new MySqlCommand
+            {
+                Connection = conn,
+                CommandText = string.Format("SELECT Email, Login FROM Users WHERE User_id='" + Id + "';")
+            };
+            reader = cmd1.ExecuteReader();
+            while (reader.Read())
+            {
+                userMail = reader.GetString(0);
+                Login = reader.GetString(1);
+            }
+            reader.Close();
+
+            Mailer.Generator generator = new Mailer.Generator();
+            string body = generator.GenerateBody(Login, orderId, "LINGVO");
+            string subject = generator.GenerateSubject("LINGVO", orderId);
+            Mailer.Mailer mailer = new Mailer.Mailer();
+            mailer.SendMail(userMail, "example@gmail.com", "", subject, body);
         }
 
         private void NewService_FormClosing(object sender, FormClosingEventArgs e)

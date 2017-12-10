@@ -96,6 +96,9 @@
     <Compile Include="Login\UserRegister.Designer.cs">
       <DependentUpon>UserRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mailer\Generator.cs" />
+    <Compile Include="Mailer\Mailer.cs" />
+    <Compile Include="Mailer\MailerConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student\GroupMembers.cs">
@@ -195,6 +198,9 @@
     <Compile Include="User\UserRoom.Designer.cs">
       <DependentUpon>UserRoom.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\AdminRoom.resx">
+      <DependentUpon>AdminRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\Answer.resx">
       <DependentUpon>Answer.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,8 +283,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mailer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
