@@ -134,11 +134,41 @@
     <Compile Include="Student\StudentRoom.Designer.cs">
       <DependentUpon>StudentRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\Add_Url.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\Add_Url.Designer.cs">
+      <DependentUpon>Add_Url.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Marks_analis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\Marks_analis.Designer.cs">
+      <DependentUpon>Marks_analis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Shedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\Shedule.Designer.cs">
+      <DependentUpon>Shedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\StartLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\StartLesson.Designer.cs">
+      <DependentUpon>StartLesson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\TeacherRoom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher\TeacherRoom.Designer.cs">
       <DependentUpon>TeacherRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Visit_analis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\Visit_analis.Designer.cs">
+      <DependentUpon>Visit_analis.cs</DependentUpon>
     </Compile>
     <Compile Include="Translator\Translator.cs" />
     <Compile Include="User\NewOrder.cs">
@@ -198,8 +228,23 @@
     <EmbeddedResource Include="Student\StudentRoom.resx">
       <DependentUpon>StudentRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\Add_Url.resx">
+      <DependentUpon>Add_Url.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\Marks_analis.resx">
+      <DependentUpon>Marks_analis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\Shedule.resx">
+      <DependentUpon>Shedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\StartLesson.resx">
+      <DependentUpon>StartLesson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher\TeacherRoom.resx">
       <DependentUpon>TeacherRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\Visit_analis.resx">
+      <DependentUpon>Visit_analis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\NewOrder.resx">
       <DependentUpon>NewOrder.cs</DependentUpon>

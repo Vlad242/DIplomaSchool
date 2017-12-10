@@ -104,8 +104,6 @@ namespace DiplomaSchool.Student
             {
                 MessageBox.Show("Index out of range!");
             }
-           
-           
         }
 
         private void ToolStripButton4_Click(object sender, EventArgs e)

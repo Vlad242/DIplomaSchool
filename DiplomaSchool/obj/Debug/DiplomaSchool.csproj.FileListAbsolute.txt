@@ -24,3 +24,8 @@ C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.S
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.StudentMarks.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.Homework.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.NewService.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Shedule.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Add_Url.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Marks_analis.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.StartLesson.resources
+C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Visit_analis.resources
