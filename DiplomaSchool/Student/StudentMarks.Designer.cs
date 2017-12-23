@@ -194,6 +194,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StudentMarks";
             this.Text = "StudentMarks";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentMarks_FormClosing);

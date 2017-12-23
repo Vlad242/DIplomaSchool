@@ -148,6 +148,7 @@
             this.ClientSize = new System.Drawing.Size(996, 268);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Shedule";
             this.Text = "Shedule";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Shedule_FormClosing);

@@ -742,6 +742,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 310);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StudentRoom";
             this.Text = "StudentRoom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentRoom_FormClosing);

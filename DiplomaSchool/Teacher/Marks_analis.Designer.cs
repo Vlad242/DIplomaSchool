@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(557, 251);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Marks_analis";
             this.Text = "Mark_analis";
             this.Load += new System.EventHandler(this.Marks_analis_Load);

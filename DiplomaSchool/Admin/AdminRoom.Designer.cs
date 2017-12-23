@@ -608,6 +608,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 282);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AdminRoom";
             this.Text = "AdminRoom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminRoom_FormClosing);

@@ -46,6 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 201);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ServiceList";
             this.Text = "SrviceList";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SrviceList_FormClosing);

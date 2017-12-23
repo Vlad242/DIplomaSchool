@@ -72,14 +72,14 @@
             // servicesListToolStripMenuItem
             // 
             this.servicesListToolStripMenuItem.Name = "servicesListToolStripMenuItem";
-            this.servicesListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.servicesListToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.servicesListToolStripMenuItem.Text = "Services list";
             this.servicesListToolStripMenuItem.Click += new System.EventHandler(this.ServicesListToolStripMenuItem_Click);
             // 
             // newOrderToolStripMenuItem
             // 
             this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
-            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.newOrderToolStripMenuItem.Text = "New order";
             this.newOrderToolStripMenuItem.Click += new System.EventHandler(this.NewOrderToolStripMenuItem_Click);
             // 
@@ -91,34 +91,34 @@
             this.xLSToolStripMenuItem,
             this.pRINTToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // tXTToolStripMenuItem
             // 
             this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
-            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.tXTToolStripMenuItem.Text = "TXT";
             this.tXTToolStripMenuItem.Click += new System.EventHandler(this.TXTToolStripMenuItem_Click);
             // 
             // pDFToolStripMenuItem
             // 
             this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.pDFToolStripMenuItem.Text = "PDF";
             this.pDFToolStripMenuItem.Click += new System.EventHandler(this.PDFToolStripMenuItem_Click);
             // 
             // xLSToolStripMenuItem
             // 
             this.xLSToolStripMenuItem.Name = "xLSToolStripMenuItem";
-            this.xLSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xLSToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.xLSToolStripMenuItem.Text = "XLS";
             this.xLSToolStripMenuItem.Click += new System.EventHandler(this.XLSToolStripMenuItem_Click);
             // 
             // pRINTToolStripMenuItem
             // 
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.pRINTToolStripMenuItem.Text = "PRINT";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.PRINTToolStripMenuItem_Click);
             // 
@@ -176,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(588, 309);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserRoom";
             this.Text = "UserRoom";

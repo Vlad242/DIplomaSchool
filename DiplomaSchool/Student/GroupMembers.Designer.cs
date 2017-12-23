@@ -46,6 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 304);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "GroupMembers";
             this.Text = "GroupMembers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GroupMembers_FormClosing);

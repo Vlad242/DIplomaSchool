@@ -57,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(310, 395);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Visit_analis";
             this.Text = "Visit_analis";
             this.Load += new System.EventHandler(this.Visit_analis_Load);

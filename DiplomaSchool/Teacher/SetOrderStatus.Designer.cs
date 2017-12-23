@@ -57,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(268, 69);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SetOrderStatus";
             this.Text = "SetOrderStatus";
             this.Load += new System.EventHandler(this.SetOrderStatus_Load);

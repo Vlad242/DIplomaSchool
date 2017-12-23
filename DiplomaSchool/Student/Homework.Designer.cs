@@ -165,6 +165,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Homework";
             this.Text = "Homework";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Homework_FormClosing);

@@ -197,6 +197,7 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StartLesson";
             this.Text = "StartLesson";
             this.Load += new System.EventHandler(this.StartLesson_Load);
