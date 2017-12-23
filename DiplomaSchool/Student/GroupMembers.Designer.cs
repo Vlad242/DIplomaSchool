@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "GroupMembers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GroupMembers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GroupMembers_FormClosing);
             this.Load += new System.EventHandler(this.GroupMembers_Load);

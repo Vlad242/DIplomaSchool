@@ -150,6 +150,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Shedule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shedule";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Shedule_FormClosing);
             this.Load += new System.EventHandler(this.Shdule_Load);

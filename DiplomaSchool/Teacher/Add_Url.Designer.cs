@@ -147,6 +147,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Url";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Url";
             this.Load += new System.EventHandler(this.Add_Url_Load);
             this.groupBox1.ResumeLayout(false);

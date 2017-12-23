@@ -10,6 +10,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using System.Text;
 
 namespace DiplomaSchool.Student
 {
@@ -19,6 +23,10 @@ namespace DiplomaSchool.Student
         public MySqlConnection conn;
         private int student_id = 0;
         private string _translationSpeakUrl;
+        static private Socket Client;
+        private IPAddress ip = null;
+        private int port = 0;
+        private Thread th;
 
         public StudentRoom(int id)
         {
@@ -27,6 +35,8 @@ namespace DiplomaSchool.Student
             DataBase.DataBaseInfo dataBase = new DataBase.DataBaseInfo();
             conn = new MySqlConnection(dataBase.GetConnectInfo());
             conn.Open();
+            button5.Visible = false;
+            button4.Enabled = false;
         }
 
         private void StudentRoom_Load(object sender, EventArgs e)
@@ -88,6 +98,25 @@ namespace DiplomaSchool.Student
             catch (Exception)
             {
 
+            }
+
+            try
+            {
+                var sr = new StreamReader(@"Client_info/data_info.txt");
+                string buffer = sr.ReadToEnd();
+                sr.Close();
+                string[] connect_info = buffer.Split(':');
+                ip = IPAddress.Parse(connect_info[0]);
+                port = int.Parse(connect_info[1]);
+
+                label7.ForeColor = System.Drawing.Color.Blue;
+                label7.Text = " Server IP: " + connect_info[0] + "\n Server port: " + connect_info[1];
+
+            }
+            catch (Exception)
+            {
+                label7.ForeColor = System.Drawing.Color.Red;
+                label7.Text = "Missing settings!";
             }
         }
 
@@ -469,6 +498,99 @@ namespace DiplomaSchool.Student
             this._editTarget.Text = string.Empty;
             this.Update();
             this._translationSpeakUrl = string.Empty;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != string.Empty)
+            {
+                button2.Enabled = true;
+                richTextBox2.Enabled = true;
+                Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                if (ip != null)
+                {
+                    Client.Connect(ip, port);
+                    th = new Thread(delegate () { RecvMessage(); });
+                    SendMessage(textBox1.Text + "#" + ";;;5");
+                    th.Start();
+                    richTextBox2.Focus();
+                }
+                button3.Visible = false;
+                button5.Visible = true;
+                button4.Enabled = true;
+            }
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (th != null)
+                {
+                    if (Client != null)
+                    {
+                        Client.Close();
+                    }
+                    th.Abort();
+                    th = null;
+                    Client = null;
+                }
+            }
+            catch (ThreadAbortException)
+            {
+            }
+           
+        }
+
+        void RecvMessage()
+        {
+            byte[] buffer = new byte[1024];
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                buffer[i] = 0;
+            }
+            for (; ; )
+            {
+                try
+                {
+                    Client.Receive(buffer);
+                    string message = Encoding.UTF8.GetString(buffer);
+                    int count = message.IndexOf(";;;5");
+                    if (count == -1)
+                    {
+                        continue;
+                    }
+                    string Clear_Message = "";
+                    for (int i = 0; i < count; i++)
+                    {
+                        Clear_Message += message[i];
+                    }
+                    this.Invoke((MethodInvoker)delegate ()
+                    {
+                        richTextBox1.AppendText(Clear_Message + "\n");
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        void SendMessage(string message)//відправлення повідомлення
+        {
+            if (message != string.Empty)
+            {
+                byte[] buffer = new byte[1024];
+                buffer = Encoding.UTF8.GetBytes(message);
+                Client.Send(buffer);
+            }
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            SendMessage(textBox1.Text + ": " + richTextBox2.Text + ";;;5");
+            richTextBox2.Clear();
         }
     }
 }

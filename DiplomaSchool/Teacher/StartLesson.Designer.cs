@@ -199,6 +199,7 @@
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StartLesson";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartLesson";
             this.Load += new System.EventHandler(this.StartLesson_Load);
             this.groupBox1.ResumeLayout(false);

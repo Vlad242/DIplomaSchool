@@ -601,6 +601,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "TeacherRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherRoom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeacherRoom_FormClosing);
             this.Load += new System.EventHandler(this.TeacherRoom_Load);

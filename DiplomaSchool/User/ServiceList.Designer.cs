@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ServiceList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SrviceList";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SrviceList_FormClosing);
             this.Load += new System.EventHandler(this.SrviceList_Load);

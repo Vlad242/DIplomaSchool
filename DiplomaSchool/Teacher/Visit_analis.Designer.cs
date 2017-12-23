@@ -59,6 +59,7 @@
             this.Controls.Add(this.checkedListBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Visit_analis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visit_analis";
             this.Load += new System.EventHandler(this.Visit_analis_Load);
             this.ResumeLayout(false);

@@ -314,6 +314,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "NewOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewOrder";
             this.Load += new System.EventHandler(this.NewOrder_Load);
             this.groupBox1.ResumeLayout(false);

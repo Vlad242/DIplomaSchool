@@ -610,6 +610,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AdminRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminRoom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminRoom_FormClosing);
             this.Load += new System.EventHandler(this.AdminRoom_Load);

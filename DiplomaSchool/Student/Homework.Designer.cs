@@ -167,6 +167,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Homework";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homework";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Homework_FormClosing);
             this.Load += new System.EventHandler(this.Homework_Load);

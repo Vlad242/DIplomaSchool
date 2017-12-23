@@ -62,6 +62,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Marks_analis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mark_analis";
             this.Load += new System.EventHandler(this.Marks_analis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

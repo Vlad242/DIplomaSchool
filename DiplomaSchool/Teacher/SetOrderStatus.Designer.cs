@@ -59,6 +59,7 @@
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SetOrderStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetOrderStatus";
             this.Load += new System.EventHandler(this.SetOrderStatus_Load);
             this.ResumeLayout(false);
