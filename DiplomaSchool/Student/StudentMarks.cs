@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiplomaSchool.Student
@@ -14,13 +8,15 @@ namespace DiplomaSchool.Student
     public partial class StudentMarks : Form
     {
         private int Id;
+        private int Studet_id;
         public MySqlConnection conn;
         public string Search = "";
 
-        public StudentMarks(int id)
+        public StudentMarks(int id, int student_id)
         {
             InitializeComponent();
             Id = id;
+            Studet_id = student_id;
             DataBase.DataBaseInfo dataBase = new DataBase.DataBaseInfo();
             conn = new MySqlConnection(dataBase.GetConnectInfo());
             conn.Open();
@@ -38,10 +34,12 @@ namespace DiplomaSchool.Student
         {
             try
             {
-                MySqlCommand cmd2 = new MySqlCommand();
-                cmd2.Connection = conn;
-                //////////////////////////
-                cmd2.CommandText = string.Format("Select S_Surname, S_Name FROM Students Where Student_id = '" + Id + "';");
+                MySqlCommand cmd2 = new MySqlCommand
+                {
+                    Connection = conn,
+                    //////////////////////////
+                    CommandText = string.Format("Select S_Surname, S_Name FROM Students Where Student_id = '" + Studet_id + "';")
+                };
                 MySqlDataReader reader = cmd2.ExecuteReader();
                 while (reader.Read())
                 {
@@ -55,7 +53,7 @@ namespace DiplomaSchool.Student
                 MySqlCommand cmd3 = new MySqlCommand
                 {
                     Connection = conn,
-                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark <= 2 and Student_id='" + Id + "';")
+                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark <= 2 and Student_id='" + Studet_id + "';")
                 };
                 MySqlDataReader reader3 = cmd3.ExecuteReader();
                 while (reader3.Read())
@@ -68,7 +66,7 @@ namespace DiplomaSchool.Student
                 {
                     Connection = conn,
                     //////////////////////////
-                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 3 and Student_id='" + Id + "';")
+                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 3 and Student_id='" + Studet_id + "';")
                 };
                 MySqlDataReader reader4 = cmd4.ExecuteReader();
                 while (reader4.Read())
@@ -81,7 +79,7 @@ namespace DiplomaSchool.Student
                 {
                     Connection = conn,
                     //////////////////////////
-                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 4 and Student_id='" + Id + "';")
+                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 4 and Student_id='" + Studet_id + "';")
                 };
                 MySqlDataReader reader0 = cmd1.ExecuteReader();
                 while (reader0.Read())
@@ -94,7 +92,7 @@ namespace DiplomaSchool.Student
                 {
                     Connection = conn,
                     //////////////////////////
-                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 5 and Student_id='" + Id + "';")
+                    CommandText = string.Format("SELECT count(Mark) From Marks Where Mark = 5 and Student_id='" + Studet_id + "';")
                 };
                 MySqlDataReader reader5 = cmd5.ExecuteReader();
                 while (reader5.Read())
@@ -115,7 +113,7 @@ namespace DiplomaSchool.Student
             ReSearch();
 
             dataGridView1.Columns.Clear();
-            MySqlDataAdapter mda = new MySqlDataAdapter("SELECT DISTINCT Subject.Sub_name, Teachers.T_Surname, Teachers.T_Name, Teachers.T_Fname, Marks.Mark, Marks.SDate FROM Marks INNER JOIN Shedule on(Marks.Subject_id = Shedule.Subject_id) INNER JOIN Workload on(Shedule.Subject_id= Shedule.Subject_id) INNER JOIN Subject on(Subject.Subject_id= Marks.Subject_id) INNER JOIN Teachers on(Marks.Teacher_id= Teachers.Teacher_id) WHERE Marks.Student_id = '" + Id + "' " + Search + ";", conn);
+            MySqlDataAdapter mda = new MySqlDataAdapter("SELECT DISTINCT Subject.Sub_name, Teachers.T_Surname, Teachers.T_Name, Teachers.T_Fname, Marks.Mark, Marks.SDate FROM Marks INNER JOIN Shedule on(Marks.Subject_id = Shedule.Subject_id) INNER JOIN Workload on(Shedule.Subject_id= Shedule.Subject_id) INNER JOIN Subject on(Subject.Subject_id= Marks.Subject_id) INNER JOIN Teachers on(Marks.Teacher_id= Teachers.Teacher_id) WHERE Marks.Student_id = '" + Studet_id + "' " + Search + ";", conn);
             DataSet ds = new DataSet();
             mda.Fill(ds, "Marks");
             dataGridView1.DataSource = ds.Tables["Marks"];
@@ -148,7 +146,7 @@ namespace DiplomaSchool.Student
         {
             Search = "";
             dataGridView1.Columns.Clear();
-            MySqlDataAdapter mda = new MySqlDataAdapter("SELECT DISTINCT Subject.Sub_name, Teachers.T_Surname, Teachers.T_Name, Teachers.T_Fname, Marks.Mark, Marks.SDate FROM Marks INNER JOIN Shedule on(Marks.Subject_id = Shedule.Subject_id) INNER JOIN Workload on(Shedule.Subject_id= Shedule.Subject_id) INNER JOIN Subject on(Subject.Subject_id= Marks.Subject_id) INNER JOIN Teachers on(Marks.Teacher_id= Teachers.Teacher_id) WHERE Marks.Student_id = '" + Id + "';", conn);
+            MySqlDataAdapter mda = new MySqlDataAdapter("SELECT DISTINCT Subject.Sub_name, Teachers.T_Surname, Teachers.T_Name, Teachers.T_Fname, Marks.Mark, Marks.SDate FROM Marks INNER JOIN Shedule on(Marks.Subject_id = Shedule.Subject_id) INNER JOIN Workload on(Shedule.Subject_id= Shedule.Subject_id) INNER JOIN Subject on(Subject.Subject_id= Marks.Subject_id) INNER JOIN Teachers on(Marks.Teacher_id= Teachers.Teacher_id) WHERE Marks.Student_id = '" + Studet_id + "';", conn);
             DataSet ds = new DataSet();
             mda.Fill(ds, "Marks");
             dataGridView1.DataSource = ds.Tables["Marks"];

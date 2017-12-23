@@ -91,6 +91,7 @@
             this._comboFrom = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -105,7 +106,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -711,6 +711,15 @@
             this.tabPage6.Text = "Chat";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Chat:";
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(272, 5);
@@ -815,7 +824,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(61, 56);
+            this.button1.Location = new System.Drawing.Point(86, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 124);
             this.button1.TabIndex = 0;
@@ -837,15 +846,6 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Chat:";
             // 
             // StudentRoom
             // 

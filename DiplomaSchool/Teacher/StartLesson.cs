@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiplomaSchool.Teacher
@@ -40,10 +35,12 @@ namespace DiplomaSchool.Teacher
         {
             try
             {
-                MySqlCommand cmd1 = new MySqlCommand();
-                cmd1.Connection = conn;
-                //////////////////////////
-                cmd1.CommandText = string.Format("SELECT DISTINCT Subject.Subject_id, Subject.Sub_name FROM Subject INNER JOIN Workload on(Subject.Subject_id=Workload.Subject_id) INNER JOIN Teachers on (Workload.Teacher_id=Teachers.Teacher_id) WHERE Workload.Teacher_id=" + Id + ";");
+                MySqlCommand cmd1 = new MySqlCommand
+                {
+                    Connection = conn,
+                    //////////////////////////
+                    CommandText = string.Format("SELECT DISTINCT Subject.Subject_id, Subject.Sub_name FROM Subject INNER JOIN Workload on(Subject.Subject_id=Workload.Subject_id) INNER JOIN Teachers on (Workload.Teacher_id=Teachers.Teacher_id) WHERE Workload.Teacher_id=" + Id + ";")
+                };
                 MySqlDataReader reader2 = cmd1.ExecuteReader();
                 while (reader2.Read())
                 {
@@ -52,20 +49,23 @@ namespace DiplomaSchool.Teacher
                 }
                 reader2.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                MySqlCommand cmd1 = new MySqlCommand();
-                cmd1.Connection = conn;
-                //////////////////////////
-                cmd1.CommandText = string.Format("SELECT DISTINCT Groups.Group_id, Groups.Group_name FROM Groups INNER JOIN Shedule on(Shedule.Group_id=Groups.Group_id) WHERE Shedule.Subject_id=" + Sub_id[comboBox1.SelectedIndex] + ";");
+                comboBox2.Items.Clear();
+                MySqlCommand cmd1 = new MySqlCommand
+                {
+                    Connection = conn,
+                    //////////////////////////
+                    CommandText = string.Format("SELECT DISTINCT Groups.Group_id, Groups.Group_name FROM Groups INNER JOIN Shedule on(Shedule.Group_id=Groups.Group_id) WHERE Shedule.Subject_id=" + Sub_id[comboBox1.SelectedIndex] + ";")
+                };
                 MySqlDataReader reader2 = cmd1.ExecuteReader();
                 while (reader2.Read())
                 {
@@ -74,13 +74,13 @@ namespace DiplomaSchool.Teacher
                 }
                 reader2.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -96,13 +96,13 @@ namespace DiplomaSchool.Teacher
                 dataGridView1.Columns[3].HeaderText = "Lesson number";
                 dataGridView1.Columns[4].HeaderText = "Date";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Something wrong!");
             }
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox4.SelectedItem.ToString() == "Date")
             {
@@ -116,7 +116,7 @@ namespace DiplomaSchool.Teacher
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             textBox3.Text = dateTimePicker1.Text;
         }

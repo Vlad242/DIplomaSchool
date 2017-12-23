@@ -10,6 +10,7 @@ namespace DiplomaSchool.Student
     public partial class Homework : Form
     {
         private int Id;
+        private int Student_id;
         private int group;
         public MySqlConnection conn;
         public string Search = "";
@@ -17,10 +18,11 @@ namespace DiplomaSchool.Student
         private List<string> URL_name = new List<string>();
         private List<string> URL = new List<string>();
 
-        public Homework(int id)
+        public Homework(int id, int student)
         {
             InitializeComponent();
-            Id = id;
+            Id = student;
+            Student_id = id;
             DataBase.DataBaseInfo dataBase = new DataBase.DataBaseInfo();
             conn = new MySqlConnection(dataBase.GetConnectInfo());
             conn.Open();
@@ -241,7 +243,7 @@ namespace DiplomaSchool.Student
 
         private void Homework_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StudentRoom room = new StudentRoom(Id);
+            StudentRoom room = new StudentRoom(Student_id);
             room.Show();
             conn.Close();
             this.Dispose();

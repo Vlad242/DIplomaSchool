@@ -154,7 +154,7 @@ namespace DiplomaSchool.Student
         {
             try
             {
-                StudentMarks marks = new StudentMarks(student_id);
+                StudentMarks marks = new StudentMarks(Id, student_id);
                 marks.Show();
                 conn.Close();
                 this.Dispose();
@@ -170,7 +170,7 @@ namespace DiplomaSchool.Student
         {
             try
             {
-                Homework homework = new Homework(student_id);
+                Homework homework = new Homework(Id, student_id);
                 homework.Show();
                 conn.Close();
                 this.Dispose();
@@ -204,9 +204,20 @@ namespace DiplomaSchool.Student
         {
             try
             {
-                if ((int)dataGridView1.CurrentRow.Cells[3].Value != 0)
+                if (dataGridView1.Rows.Count < 1)
                 {
-                    MessageBox.Show("You already have active course!First complete the started course!");
+                    if ((int)dataGridView1.CurrentRow.Cells[3].Value != 0)
+                    {
+                        MessageBox.Show("You already have active course!First complete the started course!");
+
+                    }
+                    else
+                    {
+                        NewService service = new NewService(true, Id);
+                        service.Show();
+                        conn.Close();
+                        this.Dispose();
+                    }
                 }
                 else
                 {
@@ -218,7 +229,6 @@ namespace DiplomaSchool.Student
             }
             catch (Exception)
             {
-                MessageBox.Show("Select Group on page 1!");
             }
            
         }
@@ -502,22 +512,29 @@ namespace DiplomaSchool.Student
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != string.Empty)
+            try
             {
-                button2.Enabled = true;
-                richTextBox2.Enabled = true;
-                Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                if (ip != null)
+                if (textBox1.Text != string.Empty)
                 {
-                    Client.Connect(ip, port);
-                    th = new Thread(delegate () { RecvMessage(); });
-                    SendMessage(textBox1.Text + "#" + ";;;5");
-                    th.Start();
-                    richTextBox2.Focus();
+                    button2.Enabled = true;
+                    richTextBox2.Enabled = true;
+                    Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    if (ip != null)
+                    {
+                        Client.Connect(ip, port);
+                        th = new Thread(delegate () { RecvMessage(); });
+                        SendMessage(textBox1.Text + "#" + ";;;5");
+                        th.Start();
+                        richTextBox2.Focus();
+                    }
+                    button3.Visible = false;
+                    button5.Visible = true;
+                    button4.Enabled = true;
                 }
-                button3.Visible = false;
-                button5.Visible = true;
-                button4.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Server not start!");
             }
         }
 
