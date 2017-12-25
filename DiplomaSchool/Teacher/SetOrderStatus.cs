@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiplomaSchool.Teacher
@@ -64,6 +58,7 @@ namespace DiplomaSchool.Teacher
 
                 TeacherRoom teacherRoom = new TeacherRoom(Id);
                 teacherRoom.Show();
+                Send();
                 conn.Close();
                 Dispose();
             }
@@ -71,6 +66,31 @@ namespace DiplomaSchool.Teacher
             {
             }
            
+        }
+
+        private void Send()
+        {
+            /////////////////////USer Email
+            string userMail = "";
+            string Login = "";
+            MySqlCommand cmd1 = new MySqlCommand
+            {
+                Connection = conn,
+                CommandText = string.Format("SELECT Email, Login FROM Users WHERE User_id='" + Id + "';")
+            };
+            MySqlDataReader reader = cmd1.ExecuteReader();
+            while (reader.Read())
+            {
+                userMail = reader.GetString(0);
+                Login = reader.GetString(1);
+            }
+            reader.Close();
+
+            Mailer.Generator generator = new Mailer.Generator();
+            string body = generator.GenerateCompleteBody(Login, Order_Id, "LINGVO");
+            string subject = generator.GenerateSubject("LINGVO", Order_Id);
+            Mailer.Mailer mailer = new Mailer.Mailer();
+            mailer.SendMail(userMail, "example@gmail.com", "", subject, body);
         }
     }
 }

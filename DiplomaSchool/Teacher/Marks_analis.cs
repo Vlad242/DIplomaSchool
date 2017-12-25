@@ -55,10 +55,12 @@ namespace DiplomaSchool.Teacher
             Student_id.Clear();
             try
             {
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                //////////////////////////
-                cmd.CommandText = string.Format("SELECT Group_name FROM Groups WHERE Group_id=" + Group + "; ");
+                MySqlCommand cmd = new MySqlCommand
+                {
+                    Connection = conn,
+                    //////////////////////////
+                    CommandText = string.Format("SELECT Group_name FROM Groups WHERE Group_id=" + Group + "; ")
+                };
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -66,7 +68,7 @@ namespace DiplomaSchool.Teacher
                 }
                 reader.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -81,10 +83,12 @@ namespace DiplomaSchool.Teacher
                 dataGridView1.Columns[2].HeaderText = "Fname";
                 dataGridView1.Columns[3].HeaderText = "Mark";
 
-                MySqlCommand cmd1 = new MySqlCommand();
-                cmd1.Connection = conn;
-                //////////////////////////
-                cmd1.CommandText = string.Format("SELECT Student_id, S_Surname, S_Name, S_Fname FROM Students WHERE Group_id=" + Group + Search + ";");
+                MySqlCommand cmd1 = new MySqlCommand
+                {
+                    Connection = conn,
+                    //////////////////////////
+                    CommandText = string.Format("SELECT Student_id, S_Surname, S_Name, S_Fname FROM Students WHERE Group_id=" + Group + Search + ";")
+                };
                 MySqlDataReader reader2 = cmd1.ExecuteReader();
                 int RowIndex = 0;
                 while (reader2.Read())

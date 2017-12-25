@@ -31,3 +31,33 @@ C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.T
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Visit_analis.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.SetOrderStatus.resources
 C:\Users\asus\source\repos\DiplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Admin.AdminRoom.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.exe.config
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.exe
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\bin\Debug\DiplomaSchool.pdb
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csprojResolveAssemblyReference.cache
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Admin.AdminRoom.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.Answer.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.ConfirmLogin.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.LogIn.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Login.UserRegister.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Properties.Resources.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.GroupMembers.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.Homework.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.NewService.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.Shedule.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.StudentMarks.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Student.StudentRoom.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Add_Url.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Marks_analis.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.SetOrderStatus.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Shedule.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.StartLesson.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.TeacherRoom.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.Teacher.Visit_analis.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.NewOrder.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.ServiceList.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.User.UserRoom.resources
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csproj.GenerateResource.Cache
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.csproj.CoreCompileInputs.cache
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.exe
+C:\Program Files\Diplom\DIplomaSchool\DiplomaSchool\obj\Debug\DiplomaSchool.pdb

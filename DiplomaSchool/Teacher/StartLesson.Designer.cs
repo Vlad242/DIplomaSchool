@@ -54,26 +54,30 @@
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 250);
+            this.groupBox1.Location = new System.Drawing.Point(24, 481);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(221, 102);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(442, 196);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 74);
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 142);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(214, 31);
             this.dateTimePicker1.TabIndex = 9;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(121, 74);
+            this.button6.Location = new System.Drawing.Point(242, 142);
+            this.button6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 22);
+            this.button6.Size = new System.Drawing.Size(186, 42);
             this.button6.TabIndex = 8;
             this.button6.Text = "Filter clear";
             this.button6.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             "<",
             ">=",
             "<="});
-            this.comboBox3.Location = new System.Drawing.Point(6, 49);
+            this.comboBox3.Location = new System.Drawing.Point(12, 94);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(42, 21);
+            this.comboBox3.Size = new System.Drawing.Size(80, 33);
             this.comboBox3.TabIndex = 7;
             // 
             // comboBox4
@@ -103,9 +108,10 @@
             "Audience",
             "Lesson number",
             "Date"});
-            this.comboBox4.Location = new System.Drawing.Point(6, 22);
+            this.comboBox4.Location = new System.Drawing.Point(12, 42);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(151, 21);
+            this.comboBox4.Size = new System.Drawing.Size(298, 33);
             this.comboBox4.TabIndex = 6;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.ComboBox4_SelectedIndexChanged);
             // 
@@ -114,9 +120,10 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(159, 21);
+            this.button4.Location = new System.Drawing.Point(318, 40);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 51);
+            this.button4.Size = new System.Drawing.Size(112, 98);
             this.button4.TabIndex = 2;
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -124,16 +131,18 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(54, 49);
+            this.textBox3.Location = new System.Drawing.Point(108, 94);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(103, 20);
+            this.textBox3.Size = new System.Drawing.Size(202, 31);
             this.textBox3.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 257);
+            this.button1.Location = new System.Drawing.Point(478, 494);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 95);
+            this.button1.Size = new System.Drawing.Size(236, 183);
             this.button1.TabIndex = 47;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -144,52 +153,57 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 110);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 187);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 360);
             this.dataGridView1.TabIndex = 46;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 33);
+            this.label2.Location = new System.Drawing.Point(34, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 45;
             this.label2.Text = "Group";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(76, 30);
+            this.comboBox2.Location = new System.Drawing.Point(152, 58);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(278, 21);
+            this.comboBox2.Size = new System.Drawing.Size(552, 33);
             this.comboBox2.TabIndex = 44;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 6);
+            this.label1.Location = new System.Drawing.Point(34, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(84, 25);
             this.label1.TabIndex = 43;
             this.label1.Text = "Subject";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 3);
+            this.comboBox1.Location = new System.Drawing.Point(152, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 21);
+            this.comboBox1.Size = new System.Drawing.Size(552, 33);
             this.comboBox1.TabIndex = 42;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // StartLesson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 354);
+            this.ClientSize = new System.Drawing.Size(724, 681);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -198,9 +212,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "StartLesson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartLesson";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StartLesson_FormClosing);
             this.Load += new System.EventHandler(this.StartLesson_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

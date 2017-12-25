@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DiplomaSchool.Mailer
+﻿namespace DiplomaSchool.Mailer
 {
     class MailerConfig
     {
         public string host = "smtp.gmail.com";
         public int port = 587;
-        public string userName = "############";
-        public string password = "############";
+        public string userName = "lingvoschool.ch@gmail.com";
+        public string password = "Lingvo2017D";
     }
 }

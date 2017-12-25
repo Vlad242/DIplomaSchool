@@ -10,21 +10,21 @@ namespace DiplomaSchool.Teacher
     {
         public MySqlConnection conn;
         public string connStr;
-        int Id = 0;
+        private int Id = 0;
+        private int User_id = 0;
         public List<int> Sub_id = new List<int>();
         public List<int> Gro_id = new List<int>();
         public string Search = "";
         public string Login = "";
 
-        public StartLesson(int id)
+        public StartLesson(int id, int user_id)
         {
-            ControlBox = false;
             InitializeComponent();
             DataBase.DataBaseInfo dataBase = new DataBase.DataBaseInfo();
             conn = new MySqlConnection(dataBase.GetConnectInfo());
             conn.Open();
             Id = id;
-
+            User_id = user_id;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyy:MM:dd";
             dateTimePicker1.Visible = false;
@@ -270,6 +270,14 @@ namespace DiplomaSchool.Teacher
             {
                 MessageBox.Show("Check if the input fields are full!");
             }
+        }
+
+        private void StartLesson_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TeacherRoom teacher = new TeacherRoom(User_id);
+            conn.Close();
+            teacher.Show();
+            this.Dispose();
         }
     }
 }

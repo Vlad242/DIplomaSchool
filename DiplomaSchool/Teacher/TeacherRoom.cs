@@ -198,7 +198,7 @@ namespace DiplomaSchool.Teacher
         private void ToolStripButton4_Click(object sender, EventArgs e)
         {
             conn.Close();
-            StartLesson l = new StartLesson(teacher_id);
+            StartLesson l = new StartLesson(teacher_id, Id);
             l.Show();
             this.Dispose();
         }
